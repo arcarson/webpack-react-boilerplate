@@ -1,12 +1,16 @@
 var webpack = require("webpack")
 var HtmlWebpackPlugin = require("html-webpack-plugin")
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
+var path = require("path")
+
+var BUILD_DIR = path.resolve(__dirname, "build")
+var APP_DIR = path.resolve(__dirname, "app")
 
 module.exports = {
   devtool: "eval-source-map",
-  entry:  __dirname + "/app/main.js",
+  entry: APP_DIR + "/main.js",
   output: {
-    path: __dirname + "/build",
+    path: BUILD_DIR,
     filename: "bundle.js"
   },
 
@@ -30,7 +34,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: __dirname + "/app/index.tmpl.html"
+      template: APP_DIR + "/index.tmpl.html"
     }),
     new webpack.HotModuleReplacementPlugin(),
     new ExtractTextPlugin("style.css")
