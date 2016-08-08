@@ -31,12 +31,11 @@ let styles = {
   }
 }
 
-class HelloWorld extends React.Component {
+@Radium
+export default class HelloWorld extends React.Component {
   render() {
     return (
-        <div style={styles.base}>Hello world</div>
+      <div style={styles.base}>Hello world</div>
     )
   }
 }
-
-module.exports = Radium(HelloWorld)
