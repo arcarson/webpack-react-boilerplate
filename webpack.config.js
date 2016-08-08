@@ -45,5 +45,9 @@ module.exports = {
     historyApiFallback: true,
     inline: true,
     hot: true
+  },
+
+  resolve: {
+    root: [path.resolve(APP_DIR)]
   }
 }

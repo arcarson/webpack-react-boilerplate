@@ -1,6 +1,6 @@
 import React from "react"
 import Radium from "radium"
-import Colours from "./Colours"
+import Colours from "Colours"
 
 function styleFunc() {
   return {
@@ -31,7 +31,7 @@ let styles = {
   }
 }
 
-class Greeter extends React.Component {
+class HelloWorld extends React.Component {
   render() {
     return (
         <div style={styles.base}>Hello world</div>
@@ -39,4 +39,4 @@ class Greeter extends React.Component {
   }
 }
 
-module.exports = Radium(Greeter)
+module.exports = Radium(HelloWorld)
