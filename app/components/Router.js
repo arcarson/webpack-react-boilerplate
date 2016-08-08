@@ -10,6 +10,7 @@ export default class AppRouter extends React.Component {
     const routes = {
       path: "/",
       component: App,
+      indexRoute: { onEnter: (nextState, replace) => replace("/hello-world") },
       childRoutes: [
     	{
     	  path: "hello-world",
@@ -19,7 +20,7 @@ export default class AppRouter extends React.Component {
     }
 
     return (
-      <Router history={browserHistory} routes={routes}></Router>
+      <Router history={ browserHistory } routes={ routes }></Router>
     )
   }
 }
