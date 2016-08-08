@@ -1,5 +1,6 @@
 import React from "react"
 import { Router, Route, Link, browserHistory } from "react-router"
+import { StyleRoot } from "radium"
 
 import App from "components/App"
 import HelloWorld from "components/HelloWorld"
@@ -20,7 +21,9 @@ export default class AppRouter extends React.Component {
     }
 
     return (
-      <Router history={ browserHistory } routes={ routes }></Router>
+      <StyleRoot>
+        <Router history={ browserHistory } routes={ routes }></Router>
+      </StyleRoot>
     )
   }
 }
