@@ -1,13 +1,12 @@
 import React from 'react'
 import radium from 'radium'
-import typescale from 'typescale'
+import { type, palette } from 'settings'
 
-const type = typescale()
 
 const HelloWorld = () => {
   const styles = {
     base: {
-      color: 'pink',
+      color: palette.alpha.darker,
     },
   }
 
