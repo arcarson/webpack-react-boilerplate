@@ -1,22 +1,28 @@
-import React from "react"
-import Radium from "radium"
+import React from 'react'
+import radium from 'radium'
 
-import "normalize.css"
+import 'normalize.css'
 
-const {div} = React.DOM
 
-const styles = {
-  main: {
-    width: "400px",
-    margin: "0 auto"
+const App = ({ children }) => {
+  const styles = {
+    main: {
+      width: '650px',
+      margin: '0 auto',
+    },
   }
+
+  return (
+    <div
+      style={ styles.main }
+    >
+      { children }
+    </div>
+  )
 }
 
-@Radium
-export default class App extends React.Component {
-  render() {
-    return (
-      div({style: styles.main}, this.props.children)
-    )
-  }
+App.propTypes = {
+  children: React.PropTypes.node,
 }
+
+export default radium(App)

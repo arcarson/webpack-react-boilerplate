@@ -1,41 +1,62 @@
-import React from "react"
-import Radium from "radium"
-import Colours from "Colours"
+import React from 'react'
+import radium from 'radium'
+import typescale from 'typescale'
 
-function styleFunc() {
-  return {
-    display: "inline-block",
-    background: "orange",
-    border: `solid 1px ${Colours.pink}`,
-    color: "red"
+const type = typescale()
+
+const HelloWorld = () => {
+  const styles = {
+    base: {
+      color: 'pink',
+    },
   }
+
+  return (
+    <div style={ styles.base }>
+      <p
+        style={ type.h1 }
+      >
+        While React is extremely flexible in terms of how you can structure your
+        application’s UI, I’ve found that a few patterns for style composition have
+        helped me keep things organized and easy to work with.
+      </p>
+      <p
+        style={ type.h2 }
+      >
+        While React is extremely flexible in terms of how you can structure your
+        application’s UI, I’ve found that a few patterns for style composition have
+        helped me keep things organized and easy to work with.
+      </p>
+      <p
+        style={ type.h3 }
+      >
+        While React is extremely flexible in terms of how you can structure your
+        application’s UI, I’ve found that a few patterns for style composition have
+        helped me keep things organized and easy to work with.
+      </p>
+      <p
+        style={ type.h4 }
+      >
+        While React is extremely flexible in terms of how you can structure your
+        application’s UI, I’ve found that a few patterns for style composition have
+        helped me keep things organized and easy to work with.
+      </p>
+      <p
+        style={ type.p }
+      >
+        While React is extremely flexible in terms of how you can structure your
+        application’s UI, I’ve found that a few patterns for style composition have
+        helped me keep things organized and easy to work with.
+      </p>
+      <p
+        style={ type.small }
+      >
+        While React is extremely flexible in terms of how you can structure your
+        application’s UI, I’ve found that a few patterns for style composition have
+        helped me keep things organized and easy to work with.
+      </p>
+    </div>
+  )
 }
 
-const otherStyles = {
-  background: "teal"
-}
-
-let styles = {
-  base: [
-    styleFunc(),
-    {
-      color: Colours.pink,
-      fontSize: "1.5rem",
-      "@media screen and (min-width: 900px)": {
-        color: Colours.purple
-      }
-    }
-  ],
-  orange: {
-    color: "orange"
-  }
-}
-
-@Radium
-export default class HelloWorld extends React.Component {
-  render() {
-    return (
-      <div style={styles.base}>Hello world</div>
-    )
-  }
-}
+export default radium(HelloWorld)
