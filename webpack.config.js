@@ -24,7 +24,11 @@ module.exports = {
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract("style", "css?modules!postcss")
-      }
+      },
+      {
+        test: /\.inline.svg$/,
+        loader: 'babel!svg-react'
+      },
     ]
   },
 

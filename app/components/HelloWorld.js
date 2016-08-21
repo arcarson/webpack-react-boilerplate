@@ -1,5 +1,6 @@
 import React from 'react'
 import radium from 'radium'
+import Cog from 'icons/cog.inline.svg'
 import { type, palette } from 'settings'
 
 
@@ -12,6 +13,7 @@ const HelloWorld = () => {
 
   return (
     <div style={ styles.base }>
+      <Cog />
       <p
         style={ type.h1 }
       >
