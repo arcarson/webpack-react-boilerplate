@@ -9,7 +9,7 @@ export const palette = paletteGenerator(215, '74%', '58%', { shadeVariation: '20
                                                              scheme: 'accentedAnalogous' })
 
 
-export const type = typescale({ fontFamily: 'Heebo' })
+export const type = typescale({ bodyFontFamily: 'Heebo' })
 
 const css = { html: {} }
 
